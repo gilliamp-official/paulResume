@@ -40,3 +40,8 @@ def experienceView(request):
     template = loader.get_template("experience.html")
     context = {"exp": experiences}
     return HttpResponse(template.render(context, request))
+
+def contact(request):
+    template = loader.get_template("contact.html")
+    context ={}
+    return HttpResponse(template.render(context, request))

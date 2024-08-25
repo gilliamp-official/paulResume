@@ -4,9 +4,10 @@ module.exports = {
             './mainResume/templates/**/*.html',],
   theme: {
     colors: {
-      primary: '#64aaaf',
+      primary: '000000',
       secondary: '#335057',
-      primary_text: '#F2F9F9',
+      primary_text: '#64aaaf',
+      secondary_text: '#F2F9F9',
     },
     extend: {},
   },
