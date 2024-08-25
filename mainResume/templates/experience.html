@@ -1,0 +1,30 @@
+<!-- templates/index.html -->
+{% extends "_base.html" %}
+{% load compress %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+    <h1 class="mb-4 text-4xl pl-10 pb-5 font-extrabold leading-none tracking-tight text-primary_text md:text-5xl lg:text-6xl dark:text-white">Experinces</h1>
+    {% for exper in exp %}
+    <div class="flex flex-wrap pl-10 pb-10 grid grid-flow-row">
+        <div class="grid grid-flow-col justify-start space-x-5">
+            <div class="row-span-3">
+                <a href="{{ exper.company_url }}" class="flex ml-2 mt-1 md:mr-2">
+                    <image width="40" height="40" src="https://logo.clearbit.com/{{ exper.company_url }}" viewBox="0 0 20 20">
+                </a>
+            </div>
+                <div class="content-center">
+                    <h3 class="flex items-center mb-1 text-lg font-semibold text-primary_text dark:text-white">{{ exper.company_name }} <span class="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">Current</span></h3>
+                </div>
+                <div>
+                    <time class="block mb-2 text-sm font-normal leading-none text-primary_text dark:text-gray-500">{{ exper.start_date }} - {{ exper.end_date }}</time>
+            </div>
+            <div>
+                    <p class="text-base font-normal text-blck dark:text-gray-400">{{ exper.achievements }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</html>
+{% endblock content %}
