@@ -13,12 +13,14 @@
     <title>Interactive Timeline</title>
     <style>
         .timeline {
-            
+            position: relative;
             height: 200px; /* Height of the timeline */
+            place-items-center;
+            justify-between;
         }
         .timeline-item {
-            
-            width: 1/11; /* Width of the icon */
+            position: relative;
+            width: 1/12; /* Width of the icon */
             text-align: center;
         }
         .divider {
@@ -35,54 +37,67 @@
 </head>
 <body class="bg-gray-100 p-10">
 
-    <div class="timeline justify-center grid grid-cols-11 place-content-evenly place-items-center">
+    <div class="flex justify-between mb-4">
+        <button id="prev" class="bg-blue-500 text-white px-4 py-2 rounded">Previous</button>
+        <button id="next" class="bg-blue-500 text-white px-4 py-2 rounded">Next</button>
+    </div>
+
+    <div class="timeline grid grid-cols-12 relative place-items-center justify-between">
         <div class="timeline-item" style="">
-            <button onclick="showDetails(0)" class="bg-primary_text hover:bg-blue-700 text-white font-bold rounded-full p-4">
+            <button onclick="showDetails(0)" class="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-full p-4">
                 <img src="icon1.png" alt="Company 1" class="w-16 h-16 mx-auto">
             </button>
+            <p class="font-bold">Senior Product Manager</p>
+            <p>Smartmoving</p>
         </div>
-        <div class="divider w-1/12">
+        <div class="divider">
 
         </div>
-        <div class="timeline-item" style="w-1/12">
-            <button onclick="showDetails(1)" class="bg-primary_text hover:bg-blue-700 text-white font-bold rounded-full p-4">
+        <div class="timeline-item" style="">
+            <button onclick="showDetails(1)" class="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-full p-4">
                 <img src="icon2.png" alt="Company 2" class="w-16 h-16 mx-auto">
             </button>
+            <p class="font-bold">Position 2</p>
+            <p>Company 2</p>
         </div>
         <div class="divider">
 
         </div>
         <div class="timeline-item" style="">
-            <button onclick="showDetails(2)" class="bg-primary_text hover:bg-blue-700 text-white font-bold rounded-full p-4">
+            <button onclick="showDetails(2)" class="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-full p-4">
                 <img src="icon3.png" alt="Company 3" class="w-16 h-16 mx-auto">
             </button>
+            <p class="font-bold">Position 3</p>
+            <p>Company 3</p>
         </div>
         <div class="divider">
 
         </div>
         <div class="timeline-item" style="">
-            <button onclick="showDetails(3)" class="bg-primary_text hover:bg-blue-700 text-white font-bold rounded-full p-4">
+            <button onclick="showDetails(3)" class="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-full p-4">
                 <img src="icon4.png" alt="Company 4" class="w-16 h-16 mx-auto">
             </button>
+            <p class="font-bold">Position 4</p>
+            <p>Company 4</p>
         </div>
         <div class="divider">
 
         </div>
         <div class="timeline-item" style="">
-            <button onclick="showDetails(4)" class="bg-primary_text hover:bg-blue-700 text-white font-bold rounded-full p-4">
+            <button onclick="showDetails(4)" class="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-full p-4">
                 <img src="icon5.png" alt="Company 5" class="w-16 h-16 mx-auto">
             </button>
+            <p class="font-bold">Position 5</p>
+            <p>Company 5</p>
         </div>
         <div class="divider"></div>
         <div class="timeline-item no-divider" style="">
-            <button onclick="showDetails(5)" class="bg-primary_text hover:bg-blue-700 text-white font-bold rounded-full p-4">
+            <button onclick="showDetails(5)" class="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-full p-4">
                 <img src="icon6.png" alt="Company 6" class="w-16 h-16 mx-auto">
             </button>
+            <p class="font-bold">Position 6</p>
+            <p>Company 6</p>
         </div>
-    </div>
-    <div class="flex justify-between mb-4">
-        <button id="prev" class="bg-primary_text text-white px-4 py-2 rounded ml-20">Previous</button>
-        <button id="next" class="bg-primary_text text-white px-4 py-2 rounded mr-20">Next</button>
     </div>
 
     <div id="details" class="mt-10 p-5 bg-white shadow-md rounded-lg flex">
